@@ -7,12 +7,9 @@
 	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
 
-    <!-- Load the AngularJS library
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>-->
-
-    <base href="<%- hosturl %>" target="_blank">
+    <base href="cs.cornell.edu/~oli" target="_blank">
     <!--link rel="stylesheet" type="text/css" href="/stylesheets/svgtext.css" /-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,7 +19,6 @@
     </script>
     <script src="js/main.js"></script>
     <!--<script type="text/javascript" src="js/<%=page%>.js"></script>-->
-
 
 </head>
 
@@ -41,7 +37,7 @@
 						<!-- style="opacity: 0.9;background-color: <%- params.tabs[page].colors.nav %>; border-color: <%- params.tabs[page].colors.border %>" -->
                         <div class="container-fluid">
                             <ul class="nav navbar-nav" id="nav-icon-list">
-                                <% for(var tab in params.tabs) { %>
+                                <%foreach ($tab in params.tabs) { %>
                                     <li id="nav-<%- tab %>" class="nav-item"><a href="#">
                                         <span class="glyphicon glyphicon-<%=params.tabs[tab].glyph%>"></span>
                                         <span class="hidden-xs text-capitalize"> <%= tab %> </span>
@@ -55,7 +51,7 @@
                       </div>
                     </nav>
                 </div>
-c
+
                 <div id="everything" class="container-fluid">
                     <%- include('./'+ page + '.ejs', this) %>
                 </div>
