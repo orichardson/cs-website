@@ -1,0 +1,63 @@
+<title>Oliver Richardson</title>
+<link rel="stylesheet" href="stylesheets/about.css">
+<div  class="row">
+	<!-- SIDEBAR -->
+	<div class="hidden-sm col-md-1 col-lg-1" style="height:100px;">
+
+	</div>
+	<div class="col-sm-12 col-md-10 col-lg-9">
+
+		<div class="matt">
+			<img src="profilbild2.png" style="width:200px;float:right;margin-left:15px;border-radius:50%;"/>
+
+			<h3>Blurb</h3>
+			<p>
+			</p>
+
+		</div>
+		<div class="matt">
+			<h3>News</h3>
+		</div>
+		<div class="matt">
+			<h3>Institutions</h3>
+			<ul style="list-style:none;">
+				<li class='ibullet cornell'>
+					Cornell University: Computer Science PhD Student
+				</li>
+				<li class="ibullet ucam">
+					Cambridge University, MPhil in Advanced Computer Science
+				</li>
+				<li class="ibullet uofu">
+					University of Utah, BS in Mathematics, Computer Science, and Biology / minors in Physics, Chemistry, Cognitive Science
+				</li>
+			</ul>
+			<p>
+				Here's a full copy <a href="olicv.pdf">my CV</a>.
+			</p>
+		</div>
+		<div class="matt">
+			<h3>Contact and Links</h3>
+			<p>
+				Contact me by email via <span id='address'></span>.<br><br>
+				Some of my projects are on my  <a href="https://github.com/orichardson">github page</a>,<br>
+				others can be found on my <a href="https://gitlab.com/zaytuna">gitlab page</a>
+				<!-- ,<br>
+				and <a href="https://www.linkedin.com/in/oliver-richardson-276b5a101/">this</a> is a LinkedIn page I don't use -->
+			</p>
+
+			<script type="text/javascript">
+			// first, build email address so that it's harder to get from html raw (they have to run the script)
+				$(function() {
+					// Build address when loaded.
+					var un = "oli",
+						hn = "cs.cornell.edu";
+
+					var lt = un + "@"+hn;
+
+					$('#address').html('<a href="mai'+'lto:' + lt + '"">['+ lt + ']</a>');
+				});
+			</script>
+		</div>
+
+	</div>
+</div>

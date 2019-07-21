@@ -1,3 +1,8 @@
+<?php
+    $page = $_SERVER['REQUEST_URI'];
+    
+    $toplevel = scandir('content')
+?>
 <!DOCTYPE html>
 <html ng-app="app1">
 <head>
@@ -14,9 +19,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         window.params = JSON.parse('<%-JSON.stringify(params).replace(/\'/g, "");%>');
-    </script>
+    </script> -->
     <script src="js/main.js"></script>
     <!--<script type="text/javascript" src="js/<%=page%>.js"></script>-->
 
@@ -37,6 +42,10 @@
 						<!-- style="opacity: 0.9;background-color: <%- params.tabs[page].colors.nav %>; border-color: <%- params.tabs[page].colors.border %>" -->
                         <div class="container-fluid">
                             <ul class="nav navbar-nav" id="nav-icon-list">
+                                <?php foreach ?>
+                                <? endforeach; ?>
+                            
+                            
                                 <%foreach ($tab in params.tabs) { %>
                                     <li id="nav-<%- tab %>" class="nav-item"><a href="#">
                                         <span class="glyphicon glyphicon-<%=params.tabs[tab].glyph%>"></span>
